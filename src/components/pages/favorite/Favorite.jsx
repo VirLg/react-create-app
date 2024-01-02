@@ -3,7 +3,7 @@ import { CatalogDiv } from '../catalog/Catalog.styled';
 
 import CatalogItem from '../catalog/CatalogItem';
 import { useSelector } from 'react-redux';
-import { favoriteSelector } from 'components/redux/selectors';
+import { favoriteSelector } from '../../../components/redux/selectors';
 
 const Favorite = () => {
   const favoriteArr = useSelector(favoriteSelector);

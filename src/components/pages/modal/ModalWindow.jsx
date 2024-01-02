@@ -3,7 +3,7 @@ import { Backdrop, ModalWindovDiv } from './ModalWindow.styled';
 import { useDispatch } from 'react-redux';
 
 import { createPortal } from 'react-dom';
-import { modalShow } from 'components/redux/slice';
+import { modalShow } from '../../../components/redux/slice';
 
 const modalRoot = document.querySelector('#modal-root');
 const ModalWindow = ({ children }) => {

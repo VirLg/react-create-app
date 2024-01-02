@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HeaderDiv } from './Header.styled';
-import FormSearch from 'components/pages/searcBar/FormSearch';
+import FormSearch from '../pages/searcBar/FormSearch';
 
 const Header = () => {
   return (

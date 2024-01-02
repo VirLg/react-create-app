@@ -5,8 +5,9 @@ import {
   GallarySearchInput,
   GallarySearchSelect,
 } from './FormSearch.styled';
-import makes from '../../../makes.json';
+
 const FormSearch = () => {
+  const makes = [];
   return (
     <div>
       <GallarySearchDiv>

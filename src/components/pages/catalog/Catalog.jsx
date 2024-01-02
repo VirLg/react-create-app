@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import CatalogItem from './CatalogItem';
 import { CatalogDiv } from './Catalog.styled';
-import { useGetCarsQuery } from 'components/redux/rtkQuery/cars';
 
 import { useSelector } from 'react-redux';
-import { showModalSelector } from 'components/redux/selectors';
+import { showModalSelector } from '../../redux/selectors';
 import ModalWindow from '../modal/ModalWindow';
 import ModalCard from '../modal/ModalCard';
+import { useGetCarsQuery } from '../../redux/rtkQuery/cars';
 const Catalog = () => {
   const [element, setElement] = useState(null);
   const showModal = useSelector(showModalSelector);

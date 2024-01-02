@@ -5,10 +5,10 @@ import {
   ItemDiv,
   ItemImg,
 } from './Catalog.styled';
-import HomeSvg from 'components/svg/HomeSvg';
-import { useDeleteCarMutation } from 'components/redux/rtkQuery/cars';
+import HomeSvg from '../../svg/HomeSvg';
+import { useDeleteCarMutation } from '../../../components/redux/rtkQuery/cars';
 import { useDispatch } from 'react-redux';
-import { favorite, modalShow } from 'components/redux/slice';
+import { favorite, modalShow } from '../../../components/redux/slice';
 
 const CatalogItem = ({ data, favoriteArr, handleModal }) => {
   const [deleteCar, result] = useDeleteCarMutation();
