@@ -1,0 +1,36 @@
+.house {
+  stroke: black;
+  stroke-width: 2px;
+  fill: white;
+  display: block;
+}
+
+.house .roof {
+  fill: none;
+  stroke: #d1495b;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.house .door {
+  fill: #d1495b;
+}
+
+.house .stair {
+  fill: gray;
+}
+
+.house .window {
+  fill: #fdea96;
+}
+
+.house .window-sill {
+  fill: #d1495b;
+  stroke-linecap: round;
+}
+.house:hover {
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
+}
