@@ -35,4 +35,13 @@ export const HeroConnectBtn = styled.button`
   font-size: 14px;
   line-height: 20px;
   color: rgba(255, 255, 255, 1);
+  border-radius: 45%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    background-color: red;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 `;

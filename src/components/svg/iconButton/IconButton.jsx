@@ -1,10 +1,11 @@
 import React from 'react';
+import { InonBtn } from './IconButton.styled';
 
 const IconButton = ({ children, onClick, ...allyProps }) => {
   return (
-    <button onClick={onClick} {...allyProps}>
+    <InonBtn onClick={onClick} {...allyProps} style={{}}>
       {children}
-    </button>
+    </InonBtn>
   );
 };
 

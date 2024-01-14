@@ -1,5 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {
+  createEntityAdapter,
+  createSelector,
+  createSlice,
+} from '@reduxjs/toolkit';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { useSelector } from 'react-redux';
 
 const carSlice = createSlice({
   name: 'carState',
@@ -30,17 +35,6 @@ const carSlice = createSlice({
 export const { modalShow, favorite, searched } = carSlice.actions;
 
 export const carReduser = carSlice.reducer;
-
-// import { createSlice } from '@reduxjs/toolkit';
-
-// const initialState = {
-//   access_token: '',
-//   isLoading: false,
-//   error: '',
-//   profile: null,
-//   carsCatalog: [],
-//   carsFavorite: [],
-// };
 
 // // const handleFulfilledGetAllCar = (state, action) => {
 // //   state.isLoading = false;

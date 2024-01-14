@@ -13,10 +13,12 @@ const Catalog = () => {
   const [search, setSearch] = useState(null);
   const showModal = useSelector(showModalSelector);
   const saerchBarValue = useSelector(searchedSelector);
+
   const handleModal = el => {
     setElement(el);
   };
   const { data, error, isLoading } = useGetCarsQuery();
+
   useEffect(() => {
     const searchFilterBySearchBar = () => {
       if (saerchBarValue) {

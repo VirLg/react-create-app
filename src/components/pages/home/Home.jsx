@@ -3,7 +3,7 @@ import React from 'react';
 import { ReactComponent as Telegramm } from '../../icons/Telegram_(software)-Logo.wine.svg';
 import { ReactComponent as Viber } from '../../icons/viber-svgrepo-com.svg';
 import { ReactComponent as FB } from '../../icons/facebook-svgrepo-com.svg';
-import { ReactComponent as Inst } from '../../icons/Instagram-Logo.wine.svg';
+import { ReactComponent as Inst } from '../../icons/icons8-instagram.svg';
 import { ReactComponent as Conect } from '../../icons/headphones-svgrepo-com.svg';
 import { HeroConnectBtn, HeroDiv, MainDiv, SocialDiv } from './Home.styled';
 import baner from '../../icons/rental-car.png';
@@ -46,7 +46,7 @@ const Home = () => {
             <img src={baner} alt="" width={1000} height={500} />
           </HeroDiv>
           <HeroConnectBtn className="hero_connect_btn">
-            <Conect width={120} height={120} />
+            <Conect width={120} height={120} borderRadius={50} />
           </HeroConnectBtn>
         </MainDiv>
       </div>
