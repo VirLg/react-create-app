@@ -61,4 +61,9 @@ export const GallarySearchButton = styled.button`
   font-size: 14px;
   line-height: 20px;
   color: rgba(255, 255, 255, 1);
+  &:focus,
+  &:hover {
+    background-color: blue;
+    transform: scale(1.1);
+  }
 `;

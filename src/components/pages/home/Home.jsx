@@ -46,7 +46,7 @@ const Home = () => {
             <img src={baner} alt="" width={1000} height={500} />
           </HeroDiv>
           <HeroConnectBtn className="hero_connect_btn">
-            <Conect width={120} height={120} borderRadius={50} />
+            <Conect width={120} height={120} />
           </HeroConnectBtn>
         </MainDiv>
       </div>

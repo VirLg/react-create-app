@@ -25,4 +25,9 @@ export const FormBTN = styled.button`
   color: rgba(255, 255, 255, 1);
   margin-left: auto;
   margin-right: auto;
+  &:focus,
+  &:hover {
+    background-color: blue;
+    transform: scale(1.1);
+  }
 `;
