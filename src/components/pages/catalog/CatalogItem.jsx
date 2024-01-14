@@ -10,9 +10,9 @@ import { useDeleteCarMutation } from '../../../components/redux/rtkQuery/cars';
 import { useDispatch } from 'react-redux';
 import { favorite, modalShow } from '../../../components/redux/slice';
 
-const CatalogItem = ({ data, favoriteArr, handleModal }) => {
+const CatalogItem = ({ search, favoriteArr, handleModal }) => {
   const [deleteCar, result] = useDeleteCarMutation();
-  console.log('result', result);
+
   const dispatch = useDispatch();
   const handleFavorite = el => {
     dispatch(favorite(el));
@@ -21,7 +21,7 @@ const CatalogItem = ({ data, favoriteArr, handleModal }) => {
     dispatch(modalShow(true));
     handleModal(el);
   };
-  return (data || favoriteArr || []).map((el, idx) => {
+  return (search || favoriteArr || []).map((el, idx) => {
     return (
       <div key={idx}>
         <ItemDiv className="relative">

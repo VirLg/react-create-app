@@ -5,7 +5,7 @@ export const carsApi = createApi({
   reducerPath: 'carsRtk',
 
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_BASE_URL,
+    baseUrl: 'http://localhost:4000/api/cars',
   }),
   tagTypes: ['TagCar'],
   endpoints: builder => ({
@@ -28,8 +28,23 @@ export const carsApi = createApi({
       }),
       invalidatesTags: ['TagCar'],
     }),
+
+    updateFavorite: builder.mutation({
+      query: ({ id, value }) => ({
+        url: `/${id}`,
+        method: 'PUT',
+        body: {
+          favorite: value,
+        },
+      }),
+      invalidatesTags: ['TagBike'],
+    }),
   }),
 });
 
-export const { useGetCarsQuery, useAddCarMutation, useDeleteCarMutation } =
-  carsApi;
+export const {
+  useGetCarsQuery,
+  useAddCarMutation,
+  useDeleteCarMutation,
+  useUpdateFavoriteMutation,
+} = carsApi;

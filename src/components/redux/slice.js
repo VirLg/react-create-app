@@ -6,10 +6,14 @@ const carSlice = createSlice({
   initialState: {
     modal: false,
     favorite: [],
+    searchValue: null,
   },
   reducers: {
     modalShow(state, action) {
       state.modal = action.payload;
+    },
+    searched(state, action) {
+      state.searchValue = action.payload;
     },
     favorite(state, action) {
       const unic = state.favorite.find(el => el._id === action.payload._id);
@@ -23,7 +27,7 @@ const carSlice = createSlice({
     },
   },
 });
-export const { modalShow, favorite } = carSlice.actions;
+export const { modalShow, favorite, searched } = carSlice.actions;
 
 export const carReduser = carSlice.reducer;
 

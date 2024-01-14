@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CatalogItem from './CatalogItem';
 import { CatalogDiv } from './Catalog.styled';
 import Spiner from '../../utils/spiner/Spiner';
 import { useSelector } from 'react-redux';
-import { showModalSelector } from '../../redux/selectors';
+import { searchedSelector, showModalSelector } from '../../redux/selectors';
 import ModalWindow from '../modal/ModalWindow';
 import ModalCard from '../modal/ModalCard';
 import { useGetCarsQuery } from '../../redux/rtkQuery/cars';
+
 const Catalog = () => {
   const [element, setElement] = useState(null);
+  const [search, setSearch] = useState(null);
   const showModal = useSelector(showModalSelector);
+  const saerchBarValue = useSelector(searchedSelector);
   const handleModal = el => {
     setElement(el);
   };
   const { data, error, isLoading } = useGetCarsQuery();
-  console.log('first', error);
-  console.log('first', isLoading);
+  useEffect(() => {
+    const searchFilterBySearchBar = () => {
+      if (saerchBarValue) {
+        setSearch(
+          data && data.filter(el => el.make === saerchBarValue.makeState)
+        );
+      } else setSearch(data);
+    };
+    searchFilterBySearchBar();
+  }, [data, saerchBarValue]);
   return (
     <div
       className="container"
@@ -26,7 +37,7 @@ const Catalog = () => {
     >
       {isLoading && <Spiner />}
       <CatalogDiv className="container">
-        <CatalogItem data={data} handleModal={handleModal} />
+        <CatalogItem search={search} handleModal={handleModal} />
       </CatalogDiv>
       {showModal && (
         <ModalWindow>
