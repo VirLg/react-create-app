@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CatalogItem from './CatalogItem';
 import { CatalogDiv } from './Catalog.styled';
-
+import Spiner from '../../utils/spiner/Spiner';
 import { useSelector } from 'react-redux';
 import { showModalSelector } from '../../redux/selectors';
 import ModalWindow from '../modal/ModalWindow';
@@ -21,8 +21,10 @@ const Catalog = () => {
       className="container"
       style={{
         boxShadow: `0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)`,
+        position: 'relative',
       }}
     >
+      {isLoading && <Spiner />}
       <CatalogDiv className="container">
         <CatalogItem data={data} handleModal={handleModal} />
       </CatalogDiv>
