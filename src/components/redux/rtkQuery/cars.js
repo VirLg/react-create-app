@@ -5,7 +5,7 @@ export const carsApi = createApi({
   reducerPath: 'carsRtk',
 
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:4000/api/cars',
+    baseUrl: process.env.REACT_APP_BASE_URL,
   }),
   tagTypes: ['TagCar'],
   endpoints: builder => ({
