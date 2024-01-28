@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { arr } from './questionsContent';
+import { QuestionContentmDiv, QuestionItemDiv } from './Questions.styled';
 const QuestionItem = () => {
   const [togle, setTogle] = useState(null);
   const handleClick = idx => {
@@ -13,17 +14,31 @@ const QuestionItem = () => {
     if (idx !== togle) {
       return (
         <li onClick={() => handleClick(idx)} key={idx}>
-          <p>{el.title}</p>
+          <QuestionItemDiv>
+            <p style={{ margin: '0px', fontSize: '28px' }}>{el.title}</p>
+          </QuestionItemDiv>
         </li>
       );
     } else {
       return (
         <li onClick={() => handleClick(idx)}>
-          <p>{el.title}</p>
+          <QuestionItemDiv>
+            <p
+              className="titleFont"
+              style={{ margin: '0px', fontSize: '28px' }}
+            >
+              {el.title}
+            </p>
+          </QuestionItemDiv>
 
-          <div>
-            <p>{el.context}</p>
-          </div>
+          <QuestionContentmDiv>
+            <p
+              className="titleFont"
+              style={{ margin: '0px', fontSize: '22px' }}
+            >
+              {el.context}
+            </p>
+          </QuestionContentmDiv>
         </li>
       );
     }
