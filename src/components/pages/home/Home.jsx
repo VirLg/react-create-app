@@ -4,11 +4,12 @@ import { ReactComponent as Telegramm } from '../../icons/Telegram_(software)-Log
 import { ReactComponent as Viber } from '../../icons/viber-svgrepo-com.svg';
 import { ReactComponent as FB } from '../../icons/facebook-svgrepo-com.svg';
 import { ReactComponent as Inst } from '../../icons/icons8-instagram.svg';
-import { ReactComponent as Conect } from '../../icons/headphones-svgrepo-com.svg';
+import { ReactComponent as Conect } from '../../icons/phone.svg';
 import { HeroConnectBtn, HeroDiv, MainDiv, SocialDiv } from './Home.styled';
 import baner from '../../icons/rental-car.png';
 import background from '../../icons/car.avif';
 import HeroForm from '../heroForm/HeroForm';
+import Questions from '../../questions/Questions';
 const Home = () => {
   return (
     <div
@@ -49,6 +50,9 @@ const Home = () => {
             <Conect width={120} height={120} />
           </HeroConnectBtn>
         </MainDiv>
+      </div>
+      <div>
+        <Questions />
       </div>
     </div>
   );
