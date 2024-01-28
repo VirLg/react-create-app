@@ -60,7 +60,7 @@ const Header = () => {
           }}
           to="/api/cars/add"
         >
-          <LinkSpan>ADD car to Catalog</LinkSpan>
+          <LinkSpan>Add Car</LinkSpan>
         </NavLink>
       </div>
       <div>
