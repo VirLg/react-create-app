@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const QuestionDiv = styled.div`
-  padding: 26px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  bodrer-left: 1px grey;
 `;
 
 export const QuestionItemDiv = styled.div`

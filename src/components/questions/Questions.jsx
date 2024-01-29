@@ -4,14 +4,14 @@ import { QuestionDiv } from './Questions.styled';
 
 const Questions = () => {
   return (
-    <QuestionDiv>
+    <QuestionDiv className="container">
       <p
         className="titleFont"
-        style={{ margin: '0', fontSize: '28px', paddingLeft: '26px' }}
+        style={{ margin: '0', fontSize: '28px', marginLeft: '46px' }}
       >
         Popular Question :
       </p>
-      <ul>
+      <ul style={{ marginLeft: '26px' }}>
         <QuestionItem />
       </ul>
     </QuestionDiv>
