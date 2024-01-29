@@ -25,9 +25,11 @@ export const FormBTN = styled.button`
   color: rgba(255, 255, 255, 1);
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus,
   &:hover {
     background-color: blue;
     transform: scale(1.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;

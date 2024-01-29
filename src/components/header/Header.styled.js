@@ -13,7 +13,7 @@ export const HeaderDiv = styled.div`
 export const LinkSpan = styled.span`
   color: orange;
   transform: scale(1.3);
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus,
   &:hover {
     color: blue;

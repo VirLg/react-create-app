@@ -38,6 +38,7 @@ export const HeroConnectBtn = styled.button`
   border-radius: 45%;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+
   &:hover,
   &:focus {
     transform: scale(1.5);
