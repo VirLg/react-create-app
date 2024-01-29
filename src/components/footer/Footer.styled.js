@@ -11,15 +11,14 @@ export const FooterDiv = styled.div`
     0px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 export const FooterLinkSpan = styled.span`
-  color: orange;
-  transform: scale(1.3);
+  transform: scale(1.1);
 
   &:focus,
   &:hover {
     color: blue;
     text-color: rgba(52, 112, 255, 1);
 
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 `;
 export const FooterSocialDiv = styled.div`
@@ -40,7 +39,7 @@ export const FooterSubmitBTN = styled.button`
   margin-top: 26px;
 
   background-color: rgba(52, 112, 255, 1);
-  //   border-radius: 5px;
+  border-radius: 5px;
   //   padding-top: 14px;
   //   padding-bottom: 14px;
   //   padding-left: 44px;

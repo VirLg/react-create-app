@@ -45,7 +45,12 @@ const Footer = () => {
           <input
             type="text"
             placeholder="Введіть відгук"
-            style={{ height: '24px', width: '230px', marginRight: '6px' }}
+            style={{
+              height: '24px',
+              width: '230px',
+              marginRight: '6px',
+              borderRadius: '6px',
+            }}
           />
           <FooterSubmitBTN>Submit</FooterSubmitBTN>
         </div>
