@@ -10,6 +10,7 @@ body {
 }
 li {
   list-style: none;
+  cursor: pointer;
 }
 ul {
   padding-left: 0;
