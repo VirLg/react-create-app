@@ -4,9 +4,19 @@ export const ItemDiv = styled.div`
   width: 274px;
   height: 426px;
 `;
-export const ItemImg = styled.img`
+
+export const ThumbDiv = styled.div`
   width: 274px;
   height: 268px;
+  overflow: hidden;
+  // object-fit: contain;
+`;
+export const ItemImg = styled.img`
+  // width: 274px;
+  // max-width: auto;
+  // object-fit: contain;
+  object-position: -100px 0px;
+  height: 100%;
 `;
 export const ButtonElementCard = styled.button`
 width:137px;

@@ -4,6 +4,7 @@ import {
   InfoTumb,
   ItemDiv,
   ItemImg,
+  ThumbDiv,
 } from './Catalog.styled';
 import HomeSvg from '../../svg/HomeSvg';
 import { useDeleteCarMutation } from '../../../components/redux/rtkQuery/cars';
@@ -25,12 +26,12 @@ const CatalogItem = ({ search, favoriteArr, handleModal }) => {
     return (
       <div key={idx}>
         <ItemDiv className="relative">
-          <div>
+          <ThumbDiv>
             <ItemImg src={el.img} alt="" />
             <button className="absolute" onClick={() => handleFavorite(el)}>
               <HomeSvg />
             </button>
-          </div>
+          </ThumbDiv>
 
           <InfoTumb>
             <div
